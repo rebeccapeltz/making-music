@@ -1,8 +1,6 @@
 const gulp = require('gulp');
 const del = require('del');
 const exec = require('child_process').exec;
-// const exec = require('gulp-exec');
-var runSequence = require('run-sequence');
 const gulpLoadPlugins = require('gulp-load-plugins');
 
 
