@@ -21,13 +21,6 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('docs'));
 });
 
-// gulp.task('build', function(callback){
-//   return exec('gitbook build', function (err, stdout, stderr) {
-//     console.log(stdout);
-//     console.log(stderr);
-//     callback();
-//   });
-// });
 
 gulp.task('build', function (callback) {
   // In gulp 4, you can return a child process to signal task completion
@@ -38,11 +31,6 @@ gulp.task('build', function (callback) {
   });
 });
 
-// gulp.task('default', function(callback) {
-//   runSequence('clean',
-//               'build',
-//               'copy');
-// });
 gulp.task('default', gulp.series('clean', 'build', 'copy', function (done) {
   done();
 }));
